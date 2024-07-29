@@ -1,24 +1,23 @@
 using Scalar.AspNetCore;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+IServiceCollection services = builder.Services;
+IConfiguration configuration = builder.Configuration;
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddOpenApiDocument(options =>
-{
-    options.DocumentName = "v1";
-    options.Title = "Data Producer API";
-    options.Version = "v1";
-});
+services
+    .AddEndpointsApiExplorer()
+    .AddOpenApiDocument(options =>
+    {
+        options.DocumentName = "v1";
+        options.Title = "Data Producer API";
+        options.Version = "v1";
+    }).AddControllers();
 
 WebApplication app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseOpenApi(settings =>
-    {
-        settings.Path = "/openapi/v1.json";
-    });
+    app.UseOpenApi(settings => { settings.Path = "/openapi/v1.json"; });
     app.MapScalarApiReference(options =>
     {
         options.EndpointPathPrefix = "/docs";
@@ -29,30 +28,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-    {
-        var forecast = Enumerable.Range(1, 5).Select(index =>
-                new WeatherForecast
-                (
-                    DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                    Random.Shared.Next(-20, 55),
-                    summaries[Random.Shared.Next(summaries.Length)]
-                ))
-            .ToArray();
-        return forecast;
-    })
-    .WithName("GetWeatherForecast")
-    .WithOpenApi();
+app.MapControllers();
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
-

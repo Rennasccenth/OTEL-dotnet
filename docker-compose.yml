@@ -5,3 +5,8 @@ services:
       context: .
       dockerfile: src/Modules/DataProducer/Dockerfile
 
+  datetimespammer-grpc-server:
+    image: datetimespammer-grpc-server
+    build:
+      context: .
+      dockerfile: src/Modules/DateTimeSpammer.gRPC.Server/Dockerfile
