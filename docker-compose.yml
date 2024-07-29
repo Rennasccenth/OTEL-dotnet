@@ -1,0 +1,7 @@
+services:    
+  data-producer:
+    image: data-producer
+    build:
+      context: .
+      dockerfile: src/Modules/DataProducer/Dockerfile
+
