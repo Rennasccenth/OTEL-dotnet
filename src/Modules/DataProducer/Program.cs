@@ -17,7 +17,10 @@ WebApplication app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseOpenApi(settings => { settings.Path = "/openapi/v1.json"; });
+    app.UseOpenApi(settings =>
+    {
+        settings.Path = "/openapi/{documentName}.json";
+    });
     app.MapScalarApiReference(options =>
     {
         options.EndpointPathPrefix = "/docs";
