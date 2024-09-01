@@ -11,8 +11,12 @@ namespace DataProducer.Controllers;
 public class DatetimeProducerController : Controller
 {
     [HttpGet]
-    public async IAsyncEnumerable<DateTime> Index([FromServices] IConfiguration configuration, [EnumeratorCancellation] CancellationToken cancellationToken = default)
+    public async IAsyncEnumerable<DateTime> Index(
+        [FromServices] IConfiguration configuration,
+        [FromServices] ILogger<DatetimeProducerController> logger,
+        [EnumeratorCancellation] CancellationToken cancellationToken = default)
     {
+        logger.LogInformation("Fetching datetime info.");
         var channel = GrpcChannel.ForAddress(configuration["gRPCServerAddress"]!);
         IDataSpammerService dataSpammerService = channel.CreateGrpcService<IDataSpammerService>();
 

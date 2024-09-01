@@ -23,6 +23,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Shared\Contracts\gRPC.Spammer.Contracts\gRPC.Spammer.Contracts.csproj" />
+      <ProjectReference Include="..\..\Shared\Logging\Logging.csproj" />
+      <ProjectReference Include="..\..\Shared\Monitoring\Monitoring.csproj" />
     </ItemGroup>
 
 </Project>

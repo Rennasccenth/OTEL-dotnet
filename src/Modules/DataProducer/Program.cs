@@ -1,17 +1,20 @@
+using DataProducer.Extensions;
+using Logging;
+using Monitoring;
 using Scalar.AspNetCore;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+builder
+    .ConfigureSerilog()
+    .ConfigureOpenTelemetry();
+
 IServiceCollection services = builder.Services;
 IConfiguration configuration = builder.Configuration;
 
 services
     .AddEndpointsApiExplorer()
-    .AddOpenApiDocument(options =>
-    {
-        options.DocumentName = "v1";
-        options.Title = "Data Producer API";
-        options.Version = "v1";
-    }).AddControllers();
+    .ConfigureSwaggerDoc()
+    .AddControllers();
 
 WebApplication app = builder.Build();
 
