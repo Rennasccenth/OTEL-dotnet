@@ -1,4 +1,4 @@
-using DataProducer.Extensions;
+using DataProducer.API.Extensions;
 using Logging;
 using Monitoring;
 using Scalar.AspNetCore;

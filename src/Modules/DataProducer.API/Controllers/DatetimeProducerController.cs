@@ -4,11 +4,11 @@ using gRPC.Spammer.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using ProtoBuf.Grpc.Client;
 
-namespace DataProducer.Controllers;
+namespace DataProducer.API.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class DatetimeProducerController : Controller
+public sealed class DatetimeProducerController : Controller
 {
     [HttpGet]
     public async IAsyncEnumerable<DateTime> Index(

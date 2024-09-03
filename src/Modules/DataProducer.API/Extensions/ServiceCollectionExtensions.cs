@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.Extensions.Options;
 
-namespace DataProducer.Extensions;
+namespace DataProducer.API.Extensions;
 
 public static class ServiceCollectionExtensions
 {
