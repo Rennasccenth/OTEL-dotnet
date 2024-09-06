@@ -48,4 +48,20 @@ public class BaseIntegrationTests
 
         response.Should().NotBeNullOrEmpty();
     }
+    
+    [Fact]
+    public async Task Test3()
+    {
+        // Arrange
+        var client = _stockApiWebApplicationFactory.CreateClient();
+
+        // Act
+        HttpResponseMessage responseMessage = await client.GetAsync("weatherforecast2");
+        WeatherForecast[]? response = await responseMessage.Content.ReadFromJsonAsync<WeatherForecast[]>();
+
+        // Assert
+        using var _ = new AssertionScope();
+
+        response.Should().NotBeNullOrEmpty();
+    }
 }

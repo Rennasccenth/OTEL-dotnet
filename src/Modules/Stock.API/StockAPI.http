@@ -4,3 +4,8 @@ GET {{StockAPI_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+GET {{StockAPI_HostAddress}}/weatherforecast2/
+Accept: application/json
+
+###
