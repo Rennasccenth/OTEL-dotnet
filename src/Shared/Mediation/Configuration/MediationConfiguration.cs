@@ -40,12 +40,12 @@ public sealed class MediationConfiguration
         return this;
     }
 
-    public MediationConfiguration UsingAssembly(Assembly assembly)
-    {
-        Assemblies = [assembly];
-        return this;
-    }
-
+    /// <summary>
+    /// Specify the Assemblies that contain the MediatR Handlers,
+    /// Request and Responses as the FluentValidation Validators as well.
+    /// </summary>
+    /// <param name="assemblies">Assemblies to be scanned</param>
+    /// <exception cref="ArgumentNullException"></exception>
     public MediationConfiguration UsingAssemblies(params Assembly[] assemblies)
     {
         ArgumentNullException.ThrowIfNull(assemblies);
