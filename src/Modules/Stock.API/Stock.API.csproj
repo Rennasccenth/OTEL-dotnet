@@ -17,6 +17,15 @@
     <ItemGroup>
       <ProjectReference Include="..\..\Shared\Logging\Logging.csproj" />
       <ProjectReference Include="..\..\Shared\Mediation\Mediation.csproj" />
+      <ProjectReference Include="..\..\Shared\Monitoring\Monitoring.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="LanguageExt.Core" Version="4.4.9" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Features\" />
     </ItemGroup>
 
 </Project>
