@@ -5,7 +5,7 @@ namespace Options;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection RegisterOptionsOf<T>(
+    public static IServiceCollection RegisterOption<T>(
         this IServiceCollection services,
         string sectionName,
         bool validateOnStart = true) where T : class
@@ -22,6 +22,6 @@ public static class ServiceCollectionExtensions
         return services;
     }
 
-    public static IServiceCollection RegisterOptionsOf<T>(this IServiceCollection services, bool validateOnStart = true) where T : class 
-        => services.RegisterOptionsOf<T>(sectionName: typeof(T).Name, validateOnStart);
+    public static IServiceCollection RegisterOption<T>(this IServiceCollection services, bool validateOnStart = true) where T : class 
+        => services.RegisterOption<T>(sectionName: typeof(T).Name, validateOnStart);
 }
