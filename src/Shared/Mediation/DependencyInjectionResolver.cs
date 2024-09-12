@@ -8,6 +8,11 @@ namespace Mediation;
 
 public static class DependencyInjectionResolver
 {
+    /// <summary>
+    /// Configures the Mediation package.
+    /// </summary>
+    /// <param name="services"><see cref="IServiceCollection"/> to be used.</param>
+    /// <param name="configurationAction"></param>
     public static IServiceCollection AddMediation(this IServiceCollection services, Action<MediationConfiguration> configurationAction)
     {
         MediationConfiguration configuration = new();
@@ -25,8 +30,8 @@ public static class DependencyInjectionResolver
         {
             if (mediationConfiguration.FluentValidation.IsEnabled)
             {
-                mediatRConfiguration.AddOpenBehavior(typeof(ValidationPipelineBehavior<,>));       
-                services.AddValidatorsFromAssemblies(mediationConfiguration.Assemblies);
+                mediatRConfiguration.AddOpenBehavior(typeof(ValidationPipelineBehavior<,>));
+                services.AddValidatorsFromAssemblies(mediationConfiguration.Assemblies, includeInternalTypes: true);
             }
 
             mediatRConfiguration.RegisterServicesFromAssemblies(mediationConfiguration.Assemblies);
