@@ -26,9 +26,10 @@ if (app.Environment.IsDevelopment())
     });
     app.MapScalarApiReference(options =>
     {
-        options.EndpointPathPrefix = "/docs";
-        options.DarkMode = true;
-        options.ShowSideBar = true;
+        options
+            .WithEndpointPrefix("/docs/{documentName}")
+            .WithTheme(ScalarTheme.Kepler)
+            .WithDarkMode(true);
     });
 }
 
