@@ -1,7 +1,6 @@
-using DataProducer.API.Extensions;
-using Logging;
-using Monitoring;
-using Scalar.AspNetCore;
+using Nullnes.Documentation;
+using Nullnes.Logging;
+using Nullnes.Monitoring;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 builder
@@ -13,24 +12,14 @@ IConfiguration configuration = builder.Configuration;
 
 services
     .AddEndpointsApiExplorer()
-    .ConfigureSwaggerDoc()
+    .AddOpenApiDocumentation()
     .AddControllers();
 
 WebApplication app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseOpenApi(settings =>
-    {
-        settings.Path = "/openapi/{documentName}.json";
-    });
-    app.MapScalarApiReference(options =>
-    {
-        options
-            .WithEndpointPrefix("/docs/{documentName}")
-            .WithTheme(ScalarTheme.Kepler)
-            .WithDarkMode(true);
-    });
+    app.UseOpenApiDocumentation();
 }
 
 app.UseHttpsRedirection();

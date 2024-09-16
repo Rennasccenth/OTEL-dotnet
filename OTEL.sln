@@ -21,11 +21,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gRPC.Spammer.Contracts", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeSpammer.gRPC.Server", "src\Modules\DateTimeSpammer.gRPC.Server\DateTimeSpammer.gRPC.Server.csproj", "{5251542E-0A92-46FB-AD91-5BD409F0E736}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitoring", "src\Shared\Monitoring\Monitoring.csproj", "{9107A127-DD3B-4925-9195-76CDF92ECAE1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nullnes.Monitoring", "src\Shared\Nullnes.Monitoring\Nullnes.Monitoring.csproj", "{9107A127-DD3B-4925-9195-76CDF92ECAE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging", "src\Shared\Logging\Logging.csproj", "{D2383B51-4779-451B-B278-C02512CBA817}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nullnes.Logging", "src\Shared\Nullnes.Logging\Nullnes.Logging.csproj", "{D2383B51-4779-451B-B278-C02512CBA817}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediation", "src\Shared\Mediation\Mediation.csproj", "{1154BD48-A354-4F9D-A308-AB8D8537FC01}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nullnes.Mediation", "src\Shared\Nullnes.Mediation\Nullnes.Mediation.csproj", "{1154BD48-A354-4F9D-A308-AB8D8537FC01}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock.API", "src\Modules\Stock.API\Stock.API.csproj", "{21B0E72E-7543-4B1C-8FC1-6486E188FD7F}"
 EndProject
@@ -35,7 +35,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{895D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock.API.Tests", "tests\Modules\Stock.API.Tests\Stock.API.Tests.csproj", "{94D389C9-D9B9-4717-94D1-EEAF4AC204CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Options", "src\Shared\Options\Options.csproj", "{0E7BD686-BDD9-466A-9EF6-B9BC449141F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nullnes.Options", "src\Shared\Nullnes.Options\Nullnes.Options.csproj", "{0E7BD686-BDD9-466A-9EF6-B9BC449141F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nullnes.Documentation", "src\Shared\Nullnes.Documentation\Nullnes.Documentation.csproj", "{FCFD55D5-1A88-4C19-8CC4-57B0F5C285B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +81,10 @@ Global
 		{0E7BD686-BDD9-466A-9EF6-B9BC449141F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E7BD686-BDD9-466A-9EF6-B9BC449141F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E7BD686-BDD9-466A-9EF6-B9BC449141F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCFD55D5-1A88-4C19-8CC4-57B0F5C285B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCFD55D5-1A88-4C19-8CC4-57B0F5C285B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCFD55D5-1A88-4C19-8CC4-57B0F5C285B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCFD55D5-1A88-4C19-8CC4-57B0F5C285B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{058EDE43-7935-483D-B55A-9431CBC664CD} = {261FA91D-04EA-4AA1-9584-B2D31D340297}
@@ -94,5 +100,6 @@ Global
 		{895D8E56-CB07-43E5-830E-9D35ADEF7FA3} = {6B8FE076-7A3A-4F8D-B40A-2CD5693CB59D}
 		{94D389C9-D9B9-4717-94D1-EEAF4AC204CF} = {895D8E56-CB07-43E5-830E-9D35ADEF7FA3}
 		{0E7BD686-BDD9-466A-9EF6-B9BC449141F5} = {058EDE43-7935-483D-B55A-9431CBC664CD}
+		{FCFD55D5-1A88-4C19-8CC4-57B0F5C285B1} = {058EDE43-7935-483D-B55A-9431CBC664CD}
 	EndGlobalSection
 EndGlobal

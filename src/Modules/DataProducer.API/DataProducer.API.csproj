@@ -10,10 +10,7 @@
 
     <ItemGroup>
         <PackageReference Include="Grpc.Net.Client" Version="2.65.0" />
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.8" />
-        <PackageReference Include="NSwag.AspNetCore" Version="14.1.0" />
         <PackageReference Include="protobuf-net.Grpc" Version="1.1.1" />
-        <PackageReference Include="Scalar.AspNetCore" Version="1.2.3" />
     </ItemGroup>
 
     <ItemGroup>
@@ -24,8 +21,9 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Shared\Contracts\gRPC.Spammer.Contracts\gRPC.Spammer.Contracts.csproj" />
-      <ProjectReference Include="..\..\Shared\Logging\Logging.csproj" />
-      <ProjectReference Include="..\..\Shared\Monitoring\Monitoring.csproj" />
+      <ProjectReference Include="..\..\Shared\Nullnes.Documentation\Nullnes.Documentation.csproj" />
+      <ProjectReference Include="..\..\Shared\Nullnes.Logging\Nullnes.Logging.csproj" />
+      <ProjectReference Include="..\..\Shared\Nullnes.Monitoring\Nullnes.Monitoring.csproj" />
     </ItemGroup>
 
 </Project>

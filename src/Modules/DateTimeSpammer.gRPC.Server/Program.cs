@@ -1,6 +1,6 @@
 using DateTimeSpammer.gRPC.Server.Services;
-using Logging;
-using Monitoring;
+using Nullnes.Logging;
+using Nullnes.Monitoring;
 using ProtoBuf.Grpc.Server;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);

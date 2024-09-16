@@ -1,11 +1,11 @@
 using System.Collections.Immutable;
 using FluentValidation;
 using FluentValidation.Results;
-using Mediation.Configuration;
 using MediatR;
 using Microsoft.Extensions.Options;
+using Nullnes.Mediation.Configuration;
 
-namespace Mediation.PipelineBehaviours;
+namespace Nullnes.Mediation.PipelineBehaviours;
 
 internal sealed class ValidationPipelineBehavior<TRequest, TResponse>
     : IPipelineBehavior<TRequest, TResponse> 

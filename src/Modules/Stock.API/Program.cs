@@ -1,10 +1,10 @@
 using System.Reflection;
 using FluentValidation;
-using Logging;
-using Mediation;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Monitoring;
+using Nullnes.Logging;
+using Nullnes.Mediation;
+using Nullnes.Monitoring;
 using Stock.API;
 using Stock.API.ExceptionHandlers;
 
@@ -85,6 +85,6 @@ namespace Stock.API
                 .ToArray();
         }
     }
-}
 
-public partial class Program{}
+    public partial class Program{}
+}

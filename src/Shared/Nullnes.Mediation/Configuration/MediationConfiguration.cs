@@ -2,7 +2,7 @@ using System.Reflection;
 using FluentValidation;
 using MediatR;
 
-namespace Mediation.Configuration;
+namespace Nullnes.Mediation.Configuration;
 
 /// <summary>
 /// Wraps the configuration related to the package.

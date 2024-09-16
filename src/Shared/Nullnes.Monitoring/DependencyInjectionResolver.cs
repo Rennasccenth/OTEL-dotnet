@@ -6,7 +6,7 @@ using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 
-namespace Monitoring;
+namespace Nullnes.Monitoring;
 
 public static class DependencyInjectionResolver
 {

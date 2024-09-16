@@ -1,10 +1,10 @@
 ﻿using FluentValidation;
-using Mediation.Configuration;
-using Mediation.PipelineBehaviours;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using Nullnes.Mediation.Configuration;
+using Nullnes.Mediation.PipelineBehaviours;
 
-namespace Mediation;
+namespace Nullnes.Mediation;
 
 public static class DependencyInjectionResolver
 {

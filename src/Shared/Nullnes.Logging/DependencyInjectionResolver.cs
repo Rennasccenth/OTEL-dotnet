@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Exceptions;
 
-namespace Logging;
+namespace Nullnes.Logging;
 
 public static class DependencyInjectionResolver
 {

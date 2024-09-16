@@ -1,4 +1,4 @@
-namespace Mediation.Configuration;
+namespace Nullnes.Mediation.Configuration;
 
 internal sealed class FluentValidationConfiguration
 {
