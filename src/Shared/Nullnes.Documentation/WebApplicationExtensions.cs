@@ -24,7 +24,7 @@ public static class WebApplicationExtensions
                 .WithEndpointPrefix("/docs/{documentName}")
                 .WithTheme(scalarTheme)
                 .WithDarkMode(enableDarkMode)
-                .WithForceThemeMode(ThemeMode.Dark);
+                .WithForceThemeMode(enableDarkMode ? ThemeMode.Dark : ThemeMode.Light);
         });
 
         return webApplication;
